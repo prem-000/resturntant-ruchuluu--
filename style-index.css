@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fdf6e3;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    color: rgb(8, 8, 8);
+    font-size: medium;
+    text-align: center;
+}
+h1:hover{
+    color: rgb(19, 226, 78);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+   
+}
+.item-1 {
+    background-color: aliceblue;
+    border-radius: 6%;
+    align-items: center;
+    justify-content: center; /* now this works */
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    width: 150px;
+    animation: res 10s ease-out alternate infinite;
+}
+@keyframes res{
+    0%{
+        border: 0.5px solid rgb(19, 226, 78);
+        
+    }
+    100%{
+         border: 2px solid rgb(19, 226, 78);
+    }
+}
+.item-1:hover::before {
+    width: 50%; /* Animate to half */
+}
+img{
+    width:100px; height:100px; margin-top: 2%; display: block; margin: 0 auto; padding: 2%; border-radius: 5%;
+}
+.item-1 img:hover{
+    transform:  scale(1.03);
+}
+.love-btn{
+    margin: 0;
+    padding: 0%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.love-btn:hover,
+.fa-solid.love-btn {
+  color: red;
+}
